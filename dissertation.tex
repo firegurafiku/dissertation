@@ -1,0 +1,22 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{csquotes}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Liberation Serif}
+
+\usepackage[english,russian]{babel}
+
+\usepackage[backend=biber,
+  style=gost-numeric,
+  language=auto]{biblatex}
+
+\addbibresource{bibliography/my-publications.bib}
+
+\begin{document}
+\tableofcontents
+
+\include{text/chapter1}
+\include{text/chapter2}
+\include{text/chapter3}
+
+\end{document}

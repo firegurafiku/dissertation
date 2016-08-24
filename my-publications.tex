@@ -1,0 +1,15 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{csquotes}
+\usepackage{fontspec}
+\usepackage[english,russian]{babel}
+\usepackage[backend=biber,
+  style=gost-numeric,
+  language=auto]{biblatex}
+
+\setmainfont[Ligatures=TeX]{Liberation Serif}
+\addbibresource{bibliography/my-publications.bib}
+
+\begin{document}
+\nocite{*}
+\printbibliography
+\end{document}
