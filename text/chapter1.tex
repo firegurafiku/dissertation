@@ -1,0 +1,75 @@
+\chapter{Выравнивание волнового фронта в рупорах с линейным раскрывом}
+
+\section{Искривление волнового фронта}
+
+Если мы рассмотрим рассмотрим картину электромагнитного поля,
+возникающую при излучение TEM-рупорной антенной сверхширокополосного
+импульсного сигнала, то заметим, что пространственная конфигурация
+импульса существенно изменяется по мере его прохождения от точки
+запитки до выхода в свободное пространство.
+Качественно этот процесс выглядит так:
+%
+\begin{itemize}
+  \item
+    до тех пор, пока импульс распространяется вдоль полосковой
+    линии запитки, его форма практически не изменяется и близка
+    к плоской (\FigRef{ch1:wavefrontDistortion:1});
+  \item
+    в точке соединения полосковой линии и лепестков антенны
+    происходит частичное отражение сигнала, форма импульса
+    начинает искажаться (\FigRef{ch1:wavefrontDistortion:2});
+  \item
+    по мере отдаления импульса от точки запитки искажение формы
+    фронта волны возрастает, электромагнитное поле всё сильнее
+    проникает за пределы пространства, лежащего между лепестками
+    антенны (\FigRef{ch1:wavefrontDistortion:3}).
+\end{itemize}
+
+Картины полей, приведённый на~\FigRef{ch1:wavefrontDistortion},
+получены при помощи электромагнитного моделирования простого
+TEM-рупора, лепестки которого представляют собой плоские
+равнобедренные трапеции (далee в работе мы будем называть подобные
+антенны \FirstTerm{рупорами с линейным раскрывом}), 
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{100~пс}}
+    \label{ch1:wavefrontDistortion:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{200~пс}}
+    \label{ch1:wavefrontDistortion:2}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{300~пс}}
+    \label{ch1:wavefrontDistortion:3}
+  \end{subfigure}
+
+  % TODO: Explicit styling.
+  \vspace{3mm}
+  
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{400~пс}}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{500~пс}}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.3\linewidth}
+    \ImagePlaceholder{7cm}
+    \caption{\FUZZ{600~пс}}
+  \end{subfigure}
+  
+  \caption{Искажение формы импульса по мере его распространения
+    в рупорной антенне с линейным профилем раскрыва.}
+  \label{ch1:wavefrontDistortion}
+\end{figure}
