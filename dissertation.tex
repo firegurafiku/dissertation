@@ -1,22 +1,15 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage{csquotes}
-
-\usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{Liberation Serif}
-
-\usepackage[english,russian]{babel}
-
-\usepackage[backend=biber,
-  style=gost-numeric,
-  language=auto]{biblatex}
-
-\addbibresource{bibliography/my-publications.bib}
+\input{text/preamble}
 
 \begin{document}
+\include{text/titlepage}
 \tableofcontents
-
+\include{text/abbreviations}
+\include{text/introduction}
 \include{text/chapter1}
 \include{text/chapter2}
 \include{text/chapter3}
+\include{text/conclusion}
 
+\nocite{*}
+\printbibliography
 \end{document}

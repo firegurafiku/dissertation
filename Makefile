@@ -20,6 +20,9 @@ all: \
     $(OUTDIR)/my-publications.pdf
 
 dissertation_sources_tex: \
+    text/preamble.tex \
+    text/abbreviations.tex \
+    text/titlepage.tex \
     text/introduction.tex \
     text/chapter1.tex \
     text/chapter2.tex \

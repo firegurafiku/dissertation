@@ -1,0 +1,99 @@
+\documentclass[a4paper,14pt]{extreport}
+
+% --- Packages ---
+\usepackage{csquotes}
+\usepackage{fontspec}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtext}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{titlesec}
+
+% --- Bibliography options ---
+\usepackage[
+  style=gost-numeric,
+  maxnames=10,
+  language=auto]{biblatex}
+
+\addbibresource{bibliography/my-publications.bib}
+
+% --- Vector and raster figures ---
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% --- Appearance options ---
+\geometry{
+  left   = 25mm,
+  right  = 10mm,
+  top    = 10mm,
+  bottom = 20mm}
+
+\setmainfont[Ligatures=TeX]{Liberation Serif}
+\setstretch{1.38}
+
+\newlist{where}{itemize}{1}
+\newlist{abbrevlist}{description}{1}
+\setenumerate{
+    leftmargin = \parindent,
+    topsep     = 0cm,
+    itemsep    = 0cm,
+    parsep     = 0cm,
+    partopsep  = 0cm}
+\setitemize{
+    label      = {---},
+    leftmargin = \parindent,
+    topsep     = 0cm,
+    itemsep    = 0cm,
+    parsep     = 0cm,
+    partopsep  = 0cm}
+\setdescription{
+    topsep     = 0cm,
+    leftmargin = \parindent,
+    itemsep    = 0cm,
+    parsep     = 0cm,
+    partopsep  = 0cm}
+\setlist[where]{
+    label      = ,
+    leftmargin = \parindent,
+    topsep     = 0cm,
+    itemsep    = 0cm,
+    parsep     = 0cm,
+    partopsep  = 0cm}
+\setlist[abbrevlist]{
+    font       = \normalfont,
+    leftmargin = 3cm,
+    style      = sameline,
+    topsep     = 0cm,
+    itemsep    = 0cm,
+    parsep     = 0cm,
+    partopsep  = 0cm}
+
+\titleformat{\section}{\normalfont\bfseries}{\thesection.}{1em}{}
+\titleformat{\chapter}[display]
+            {\setstretch{1.2}\raggedright\normalfont\Large\bfseries}
+            {\Large\chaptername~\thechapter}{0.5em}{}
+
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+% --- Custom commands ---
+\newcommand\ImagePlaceholder[2][0.95\linewidth]{%
+  \fbox{\begin{minipage}{#1}
+          \hfill\vspace{#2}
+	\end{minipage}}}
+
+\newcommand\FigRef[1]{рис.~\ref{#1}}
+\newcommand\FirstTerm[1]{\emph{#1}}
+
+\newcommand\TODO[1]{\colorbox{red}{#1}}
+\newcommand\FUZZ[1]{\colorbox{yellow}{#1}}
+\newcommand\Unit[1]{\,\ensuremath{\mathrm{#1}}}
+\newcommand\Num[1]{#1}
+\newcommand\Val[2]{\Num{#1}~\Unit{#2}}
